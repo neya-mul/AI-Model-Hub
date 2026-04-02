@@ -12,8 +12,7 @@ import CardContainer from './components/CardContainer'
 
 
 function App() {
-  
-  const [count, setCount] = useState(0)
+  const [isModel, setIsModel] = useState('model')
 
   return (
     <>
@@ -21,7 +20,7 @@ function App() {
       {/* <Banner></Banner> */}
       <Banner></Banner>
    
-        <CardContainer api={api}></CardContainer>
+        <CardContainer api={api} isModel={isModel} setIsModel={setIsModel}></CardContainer>
      
       <Footer></Footer>
     </>
