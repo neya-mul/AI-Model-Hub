@@ -5,12 +5,12 @@ export default function Card({ data }) {
 
     return (
         <div>
-            <div className="card mx-auto bg-base-100 w-96 shadow-sm">
+            <div className="card mx-auto bg-base-100 max-w-[400px] h-auto shadow-sm">
                 <figure className='bg-gray-200 p-5'>
                     <img
                         src={data.image}
                         alt="" 
-                        className='h-[150px] w-fit'/>
+                        className='h-[200px] w-fit p-10 '/>
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{data.title}</h2>
