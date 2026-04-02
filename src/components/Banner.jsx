@@ -10,11 +10,11 @@ const Banner = () => {
   }
   @keyframes floatFade {
     0%, 100% { opacity: 1; }
-    50%       { opacity: 0.7; }
+    50%       { opacity: 0.9; }
   }
   .float-image {
-    animation: floatMove 4s ease-in-out infinite,
-               floatFade 2s ease-in-out infinite;
+    animation: floatMove 3s ease-in-out infinite,
+               floatFade 3s ease-in-out infinite;
   }
 `}</style>
 
