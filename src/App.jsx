@@ -14,6 +14,7 @@ import CardContainer from './components/CardContainer'
 function App() {
   const [isModel, setIsModel] = useState('model')
 
+
   return (
     <>
       <Navbar></Navbar>

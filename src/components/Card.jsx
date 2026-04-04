@@ -1,8 +1,10 @@
 import React from 'react'
 
-export default function Card({ data }) {
+export default function Card({ data}) {
     console.log(data);
-
+const subscribeButton = ()=>{
+    setIsSubscribed(true)
+}
     return (
         <div>
             <div className="card mx-auto bg-base-100 max-w-[400px] h-auto shadow-sm">
@@ -17,7 +19,7 @@ export default function Card({ data }) {
                     <p className='min-h-[70px]'>{data.description}</p>
                     <span className='text-2xl font-bold'>{data.price}$/month</span>
                     <div className="card-actions justify-end">
-                        <button className="btn w-full bg-red-500 text-white">Subscribe Now</button>
+                        <button onClick={subscribeButton} className="btn w-full bg-red-500 text-white">Subscribe Now</button>
                     </div>
                 </div>
             </div>
