@@ -1,8 +1,13 @@
 import React from 'react'
 
-export default function CartModel({ cartModel }) {
-    console.log(cartModel)
-  
+export default function CartModel({ cartModel, isAdded, setIsAdded }) {
+    // console.log(cartModel)
+    const deleteButton = (cartModel) => {
+        let filter = isAdded.filter(c => c.title != cartModel.title)
+        // console.log(filter)
+        setIsAdded(filter)
+    }
+
     return (
 
         <div className='p-3 rounded-2xl border min-h-3.5 my-8 flex justify-between bg-gray-200 border-gray-300 items-center'>
@@ -15,7 +20,7 @@ export default function CartModel({ cartModel }) {
                 </div>
 
             </div>
-            <button className='btn bg-red-500 text-gray-100'>Delete</button>
+            <button onClick={() => deleteButton(cartModel)} className='btn bg-red-500 text-gray-100'>Delete</button>
 
         </div>
     )

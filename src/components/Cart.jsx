@@ -5,12 +5,12 @@ import { toast } from 'react-toastify'
 export default function Cart({ isAdded, setIsAdded }) {
   const proceedToCheckout = () => {
     setIsAdded([])
-   if(isAdded.length > 0 ){
-     toast.info('All items has proceed to checkout')
-   }
-   else{
-    toast.info('No items available')
-   }
+    if (isAdded.length > 0) {
+      toast.info('All items has proceed to checkout')
+    }
+    else {
+      toast.info('No items available')
+    }
 
   }
 
@@ -20,7 +20,7 @@ export default function Cart({ isAdded, setIsAdded }) {
     <div className='max-w-[1200px] mx-auto'>{
       isAdded.length > 0 ?
         <div className='max-w-[1200px] mx-auto'>
-          {isAdded.map(cartModel => <CartModel cartModel={cartModel}></CartModel>)}
+          {isAdded.map(cartModel => <CartModel cartModel={cartModel} isAdded={isAdded} setIsAdded={setIsAdded}></CartModel>)}
         </div>
         :
         <div className='max-w-[1200px] mx-auto text-center'>
