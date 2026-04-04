@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function CartModel({ cartModel }) {
     console.log(cartModel)
+  
     return (
 
         <div className='p-3 rounded-2xl border min-h-3.5 my-8 flex justify-between bg-gray-200 border-gray-300 items-center'>
