@@ -15,13 +15,14 @@ function App() {
   const [isModel, setIsModel] = useState('model')
 
 
+
   return (
     <>
       <Navbar></Navbar>
       {/* <Banner></Banner> */}
       <Banner></Banner>
    
-        <CardContainer api={api} isModel={isModel} setIsModel={setIsModel}></CardContainer>
+        <CardContainer api={api} isModel={isModel} setIsModel={setIsModel} ></CardContainer>
      
       <Footer></Footer>
     </>

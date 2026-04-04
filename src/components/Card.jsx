@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { toast } from 'react-toastify'
 
-export default function Card({ data}) {
-    console.log(data);
-const subscribeButton = ()=>{
-    setIsSubscribed(true)
-}
+export default function Card({ data }) {
+    const [isSubscribed, setIsSubscribed] = useState(false)
+    // console.log(data);
+
+
+
+    const subscribeButton = () => {
+        setIsSubscribed(true)
+        toast.success(
+            <span>
+                <strong className='font-bold text-2xl'>{data.title}</strong> has been added to cart
+            </span>
+        )
+    }
     return (
         <div>
             <div className="card mx-auto bg-base-100 max-w-[400px] h-auto shadow-sm">
@@ -19,7 +29,7 @@ const subscribeButton = ()=>{
                     <p className='min-h-[70px]'>{data.description}</p>
                     <span className='text-2xl font-bold'>{data.price}$/month</span>
                     <div className="card-actions justify-end">
-                        <button onClick={subscribeButton} className="btn w-full bg-red-500 text-white">Subscribe Now</button>
+                        <button onClick={subscribeButton} className="btn w-full bg-red-500 text-white">{`${isSubscribed ? 'Subscribed' : 'Subscribe Now'}`}</button>
                     </div>
                 </div>
             </div>
