@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
-export default function Card({ data }) {
+export default function Card({ data, isAdded, setIsAdded }) {
     const [isSubscribed, setIsSubscribed] = useState(false)
     // console.log(data);
 
@@ -13,8 +13,11 @@ export default function Card({ data }) {
             <span>
                 <strong className='font-bold text-2xl'>{data.title}</strong> has been added to cart
             </span>
+
         )
+        setIsAdded([...isAdded, data])
     }
+    // console.log(isAdded)
     return (
         <div>
             <div className="card mx-auto bg-base-100 max-w-[400px] h-auto shadow-sm">

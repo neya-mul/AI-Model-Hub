@@ -1,6 +1,6 @@
 import { FaShoppingCart } from "react-icons/fa";
 import logo from "../images/logo.png"
-const NavBar = ({isSubscribed, setIsSubscribed}) => {
+const NavBar = ({isAdded, setIsAdded}) => {
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
