@@ -18,8 +18,8 @@ const Banner = () => {
   }
 `}</style>
 
-      <div className="relative flex items-center overflow-hidden " style={{ minHeight: "650px" }}>
-        <div className="w-full px-6 mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+      <div className="relative py-40 flex items-center overflow-hidden " style={{ minHeight: "650px" }}>
+        <div className="w-full px-6 mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-0">
           
           {/* Left Content */}
           <div className="space-y-4">

@@ -37,7 +37,7 @@ export default function Cart({ isAdded, setIsAdded }) {
           <h1 className='text-3xl font-bold'>Your Cart is empty</h1>
         </div>
     }
-      <div className='flex justify-between bg-black text-white btn my-10 '>
+      <div className='flex justify-between bg-gray-600 text-white btn my-6 '>
         <h1 className='text-2xl font-bold'>Total</h1>
         <span className='text-2xl font-bold'>{s}</span>
       </div>
